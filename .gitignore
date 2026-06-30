@@ -1,0 +1,62 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+
+# AI IDE and assistant files
+.cursor/
+.windsurf/
+.continue/
+.roo/
+.kiro/
+.claude/
+.aider*
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Node and frontend build artifacts
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local data and caches
+.cache/
+
+# Local working docs
+_docs/
+_dev/
+
+# Nested app repos tracked separately from the root repo
+modbots-desktop/
+modbots-web/
