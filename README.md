@@ -18,8 +18,8 @@ It contains the project-level files and the application directories.
 
 ## Repository Layout
 
-- [modbots-web](modbots-web/): web app track
-- [modbots-desktop](modbots-desktop/): desktop app track
+- [modbots-web](https://github.com/wsucauid798/modbots-web): web app track
+- [modbots-desktop](https://github.com/wsucauid798/modbots-desktop): desktop app track
 - [README.md](README.md): root project overview
 
 ## Prerequisites
@@ -32,15 +32,15 @@ You may need:
 - Python and uv
 - Rust toolchain for desktop work
 
-See [modbots-web](modbots-web/) and [modbots-desktop](modbots-desktop/) for app-specific setup and usage.
+See [modbots-web](https://github.com/wsucauid798/modbots-web) and [modbots-desktop](https://github.com/wsucauid798/modbots-desktop) for app-specific setup and usage.
 
 ## Running
 
 This repository does not provide a single root-level application command.
 
-Run the web app from [modbots-web](modbots-web/).
+Run the web app from [modbots-web](https://github.com/wsucauid798/modbots-web).
 
-Run the desktop app from [modbots-desktop](modbots-desktop/).
+Run the desktop app from [modbots-desktop](https://github.com/wsucauid798/modbots-desktop).
 
 ## License
 
