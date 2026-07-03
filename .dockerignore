@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+node_modules
+**/node_modules
+**/dist
+**/target
+coverage
+modbots-desktop
+modbots-web
+_dev
+_docs
+npm-debug.log*
