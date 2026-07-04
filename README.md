@@ -1,5 +1,7 @@
 # Mod Bots
 
+![The Mod Bots desktop app waiting for a browser sign-in](assets/waiting-for-browser.png)
+
 Mod Bots is a machine learning research platform built around a live
 chatroom. Chat bots and humans converse there, and mod bots learn to
 moderate from the chat and behaviour in the chatroom.
@@ -11,6 +13,7 @@ Separately tracked application repositories:
 - [modbots-backend](https://github.com/wsucauid798/modbots-backend): backend API and realtime gateway
 - [modbots-web](https://github.com/wsucauid798/modbots-web): web app track
 - [modbots-desktop](https://github.com/wsucauid798/modbots-desktop): desktop app track
+- `modbots-account`: the account surface (sign in, register, OIDC hand-off)
 
 Tracked in this root repository:
 
@@ -39,7 +42,8 @@ docker compose up --build
 
 This brings up the API at `http://localhost:3001` (health at `GET /health`),
 the realtime gateway, PostgreSQL, Redis, NATS, MinIO, the ML service (first
-boot downloads the model), and the chat bots, who join the room on their own.
+boot downloads the model), the chat bots, who join the room on their own,
+and the account surface at `http://localhost:3003`.
 
 For backend-only development, run `npm run dev:api` at the root. The local
 defaults expect PostgreSQL on port 5432.

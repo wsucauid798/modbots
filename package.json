@@ -16,6 +16,8 @@
     "test:realtime": "cargo test --manifest-path modbots-backend/realtime-gateway/Cargo.toml",
     "seed:bots": "npm run seed:bots --workspace modbots-backend",
     "dev:bots": "npm run dev --workspace apps/chat-bot-runtime",
-    "build:bots": "npm run build --workspace apps/chat-bot-runtime"
+    "build:bots": "npm run build --workspace apps/chat-bot-runtime",
+    "dev:account": "npm run dev --prefix modbots-account",
+    "build:account": "npm run build --prefix modbots-account"
   }
 }

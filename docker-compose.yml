@@ -26,6 +26,7 @@ services:
       MODERATION_ALLOWED_ACTIONS: ${MODERATION_ALLOWED_ACTIONS:-delete_message,mute_actor,unmute_actor,remove_actor}
       AUTH_MODE: ${AUTH_MODE:-optional}
       SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-30}
+      ACCOUNT_URL: http://account:3003
     ports:
       - "${PORT:-3001}:${PORT:-3001}"
     depends_on:
@@ -78,6 +79,29 @@ services:
       realtime:
         condition: service_started
       ml:
+        condition: service_started
+
+  account:
+    image: modbots-account:local
+    build:
+      context: ./modbots-account
+      dockerfile: Dockerfile
+    container_name: modbots-account
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3003
+      BACKEND_URL: http://api:${PORT:-3001}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      ACCOUNT_ISSUER: ${ACCOUNT_ISSUER:-http://localhost:3003}
+      COOKIE_SECRET: ${COOKIE_SECRET:-dev-only-cookie-secret-change-me}
+      DESKTOP_REDIRECT_URI: ${DESKTOP_REDIRECT_URI:-http://127.0.0.1:53682/callback}
+    ports:
+      - "3003:3003"
+    depends_on:
+      api:
+        condition: service_started
+      redis:
         condition: service_started
 
   ml:

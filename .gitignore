@@ -54,10 +54,12 @@ venv/
 .cache/
 
 # Local working docs
-_docs/
+_branding/
 _dev/
+_docs/
 
 # Nested app repos tracked separately from the root repo
+modbots-account/
 modbots-backend/
 modbots-desktop/
 modbots-web/
