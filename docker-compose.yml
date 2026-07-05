@@ -64,7 +64,7 @@ services:
     image: modbots-chat-bots:local
     build:
       context: .
-      dockerfile: apps/chat-bot-runtime/Dockerfile
+      dockerfile: modbots-backend/chat-bot-runtime/Dockerfile
     container_name: modbots-chat-bots
     restart: unless-stopped
     environment:
@@ -107,8 +107,8 @@ services:
   ml:
     image: modbots-ml:local
     build:
-      context: .
-      dockerfile: services/ml/Dockerfile
+      context: ./modbots-backend/ml
+      dockerfile: Dockerfile
     container_name: modbots-ml
     restart: unless-stopped
     environment:

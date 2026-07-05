@@ -4,7 +4,7 @@
   "version": "0.0.1-alpha",
   "workspaces": [
     "modbots-backend",
-    "apps/chat-bot-runtime"
+    "modbots-backend/chat-bot-runtime"
   ],
   "scripts": {
     "dev:api": "npm run dev --workspace modbots-backend",
@@ -15,8 +15,8 @@
     "test:api": "npm run test --workspace modbots-backend",
     "test:realtime": "cargo test --manifest-path modbots-backend/realtime-gateway/Cargo.toml",
     "seed:bots": "npm run seed:bots --workspace modbots-backend",
-    "dev:bots": "npm run dev --workspace apps/chat-bot-runtime",
-    "build:bots": "npm run build --workspace apps/chat-bot-runtime",
+    "dev:bots": "npm run dev --workspace modbots-backend/chat-bot-runtime",
+    "build:bots": "npm run build --workspace modbots-backend/chat-bot-runtime",
     "dev:account": "npm run dev --prefix modbots-account",
     "build:account": "npm run build --prefix modbots-account"
   }
