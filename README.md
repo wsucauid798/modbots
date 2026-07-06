@@ -10,7 +10,7 @@ moderate from the chat and behaviour in the chatroom.
 
 Separately tracked application repositories:
 
-- [modbots-backend](https://github.com/wsucauid798/modbots-backend): the platform (account, API, realtime gateway, chat bot runtime, ML inference service)
+- [modbots-backend](https://github.com/wsucauid798/modbots-backend): the platform (account, API, realtime gateway, chat bot runtime, ML inference, and UPPS)
 - [modbots-web](https://github.com/wsucauid798/modbots-web): web app track
 - [modbots-desktop](https://github.com/wsucauid798/modbots-desktop): desktop app track
 
@@ -40,7 +40,8 @@ docker compose up --build
 This brings up the API at `http://localhost:3001` (health at `GET /health`),
 the realtime gateway, PostgreSQL, Redis, NATS, MinIO, the ML service (first
 boot downloads the model), the chat bots, who join the room on their own,
-and the account surface at `http://localhost:3003`.
+the account surface at `http://localhost:3003`, and UPPS at
+`http://localhost:3010`.
 
 For backend-only development, run `npm run dev:api` at the root. The local
 defaults expect PostgreSQL on port 5432.

@@ -27,6 +27,7 @@ services:
       AUTH_MODE: ${AUTH_MODE:-optional}
       SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-30}
       ACCOUNT_URL: http://account:3003
+      UPPS_PUBLIC_URL: ${UPPS_PUBLIC_URL:-http://localhost:3010}
     ports:
       - "${PORT:-3001}:${PORT:-3001}"
     depends_on:
@@ -37,6 +38,8 @@ services:
       nats:
         condition: service_started
       minio:
+        condition: service_started
+      upps:
         condition: service_started
 
   realtime:
@@ -103,6 +106,19 @@ services:
         condition: service_started
       redis:
         condition: service_started
+
+  upps:
+    image: modbots-upps:local
+    build:
+      context: .
+      dockerfile: modbots-backend/services/upps/Dockerfile
+    container_name: modbots-upps
+    restart: unless-stopped
+    environment:
+      MODBOTS_UPPS_HOST: 0.0.0.0
+      MODBOTS_UPPS_PORT: 3010
+    ports:
+      - "3010:3010"
 
   ml:
     image: modbots-ml:local

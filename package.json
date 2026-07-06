@@ -5,7 +5,8 @@
   "workspaces": [
     "modbots-backend/services/account",
     "modbots-backend/services/api",
-    "modbots-backend/services/runtime"
+    "modbots-backend/services/runtime",
+    "modbots-backend/services/upps"
   ],
   "scripts": {
     "dev:api": "npm run dev --workspace modbots-backend",
@@ -21,6 +22,10 @@
     "build:bots": "npm run build --workspace modbots-chat-bot-runtime",
     "dev:account": "npm run dev --workspace modbots-account",
     "build:account": "npm run build --workspace modbots-account",
-    "start:account": "npm run start --workspace modbots-account"
+    "start:account": "npm run start --workspace modbots-account",
+    "dev:upps": "npm run dev --workspace modbots-upps",
+    "build:upps": "npm run build --workspace modbots-upps",
+    "start:upps": "npm run start --workspace modbots-upps",
+    "test:upps": "npm run test --workspace modbots-upps"
   }
 }
