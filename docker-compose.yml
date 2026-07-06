@@ -63,12 +63,12 @@ services:
       nats:
         condition: service_started
 
-  chat-bots:
-    image: modbots-chat-bots:local
+  runtime:
+    image: modbots-runtime:local
     build:
       context: .
       dockerfile: modbots-backend/services/runtime/Dockerfile
-    container_name: modbots-chat-bots
+    container_name: modbots-runtime
     restart: unless-stopped
     environment:
       MODBOTS_API_URL: http://api:${PORT:-3001}
