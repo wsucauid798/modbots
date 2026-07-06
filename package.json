@@ -3,20 +3,21 @@
   "private": true,
   "version": "0.0.1-alpha",
   "workspaces": [
-    "modbots-backend",
-    "modbots-backend/chat-bot-runtime"
+    "modbots-backend/services/api",
+    "modbots-backend/services/runtime"
   ],
   "scripts": {
     "dev:api": "npm run dev --workspace modbots-backend",
     "build:api": "npm run build --workspace modbots-backend",
-    "build:realtime": "cargo build --manifest-path modbots-backend/realtime-gateway/Cargo.toml",
+    "build:realtime": "cargo build --manifest-path modbots-backend/services/realtime/Cargo.toml",
     "smoke:activity": "npm run smoke:activity --workspace modbots-backend",
     "start:api": "npm run start --workspace modbots-backend",
     "test:api": "npm run test --workspace modbots-backend",
-    "test:realtime": "cargo test --manifest-path modbots-backend/realtime-gateway/Cargo.toml",
+    "test:contracts": "npm run test:contracts --workspace modbots-backend",
+    "test:realtime": "cargo test --manifest-path modbots-backend/services/realtime/Cargo.toml",
     "seed:bots": "npm run seed:bots --workspace modbots-backend",
-    "dev:bots": "npm run dev --workspace modbots-backend/chat-bot-runtime",
-    "build:bots": "npm run build --workspace modbots-backend/chat-bot-runtime",
+    "dev:bots": "npm run dev --workspace modbots-chat-bot-runtime",
+    "build:bots": "npm run build --workspace modbots-chat-bot-runtime",
     "dev:account": "npm run dev --prefix modbots-account",
     "build:account": "npm run build --prefix modbots-account"
   }

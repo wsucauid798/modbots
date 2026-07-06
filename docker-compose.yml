@@ -5,7 +5,7 @@ services:
     image: modbots-backend-api:local
     build:
       context: .
-      dockerfile: modbots-backend/Dockerfile
+      dockerfile: modbots-backend/services/api/Dockerfile
     container_name: modbots-backend-api
     restart: unless-stopped
     environment:
@@ -42,7 +42,7 @@ services:
   realtime:
     image: modbots-backend-realtime:local
     build:
-      context: ./modbots-backend/realtime-gateway
+      context: ./modbots-backend/services/realtime
       dockerfile: Dockerfile
     container_name: modbots-backend-realtime
     restart: unless-stopped
@@ -64,7 +64,7 @@ services:
     image: modbots-chat-bots:local
     build:
       context: .
-      dockerfile: modbots-backend/chat-bot-runtime/Dockerfile
+      dockerfile: modbots-backend/services/runtime/Dockerfile
     container_name: modbots-chat-bots
     restart: unless-stopped
     environment:
@@ -107,7 +107,7 @@ services:
   ml:
     image: modbots-ml:local
     build:
-      context: ./modbots-backend/ml
+      context: ./modbots-backend/services/ml
       dockerfile: Dockerfile
     container_name: modbots-ml
     restart: unless-stopped
