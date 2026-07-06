@@ -84,8 +84,8 @@ services:
   account:
     image: modbots-account:local
     build:
-      context: ./modbots-account
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: modbots-backend/services/account/Dockerfile
     container_name: modbots-account
     restart: unless-stopped
     environment:

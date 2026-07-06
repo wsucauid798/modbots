@@ -10,10 +10,9 @@ moderate from the chat and behaviour in the chatroom.
 
 Separately tracked application repositories:
 
-- [modbots-backend](https://github.com/wsucauid798/modbots-backend): the platform (API, realtime gateway, chat bot runtime, ML inference service)
+- [modbots-backend](https://github.com/wsucauid798/modbots-backend): the platform (account, API, realtime gateway, chat bot runtime, ML inference service)
 - [modbots-web](https://github.com/wsucauid798/modbots-web): web app track
 - [modbots-desktop](https://github.com/wsucauid798/modbots-desktop): desktop app track
-- [modbots-account](https://github.com/wsucauid798/modbots-account): the account surface (log in, register, OIDC hand-off)
 
 This root repository holds only the container: compose, environment
 examples, and project files.

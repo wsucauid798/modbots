@@ -59,7 +59,6 @@ _dev/
 _docs/
 
 # Nested app repos tracked separately from the root repo
-modbots-account/
 modbots-backend/
 modbots-desktop/
 modbots-web/
