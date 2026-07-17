@@ -132,14 +132,11 @@ services:
       OLLAMA_MODEL: ${OLLAMA_MODEL:-gemma4:31b-cloud}
       OLLAMA_API_KEY: ${OLLAMA_API_KEY:?OLLAMA_API_KEY is required}
       OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-120}
-      TRANSCRIPTION_MODEL: ${TRANSCRIPTION_MODEL:-small}
-      TRANSCRIPTION_DEVICE: ${TRANSCRIPTION_DEVICE:-cpu}
-      TRANSCRIPTION_COMPUTE_TYPE: ${TRANSCRIPTION_COMPUTE_TYPE:-int8}
-      TRANSCRIPTION_CACHE: /data/asr
+      OLLAMA_AUDIO_HOST: ${OLLAMA_AUDIO_HOST:-}
+      OLLAMA_AUDIO_MODEL: ${OLLAMA_AUDIO_MODEL:-gemma4:e4b}
+      OLLAMA_AUDIO_API_KEY: ${OLLAMA_AUDIO_API_KEY:-}
     ports:
       - "8000:8000"
-    volumes:
-      - asr-cache:/data/asr
 
   postgres:
     image: postgres:17-alpine
@@ -198,7 +195,6 @@ services:
       - minio-data:/data
 
 volumes:
-  asr-cache:
   postgres-data:
   redis-data:
   nats-data:
