@@ -26,7 +26,7 @@ services:
       MODERATION_ALLOWED_ACTIONS: ${MODERATION_ALLOWED_ACTIONS:-delete_message,mute_actor,unmute_actor,remove_actor}
       AUTH_MODE: ${AUTH_MODE:-optional}
       SESSION_TTL_DAYS: ${SESSION_TTL_DAYS:-30}
-      ACCOUNT_URL: http://account:3003
+      ACCOUNT_URL: ${ACCOUNT_URL:-http://account:3003}
       UPPS_PUBLIC_URL: ${UPPS_PUBLIC_URL:-http://localhost:3010}
     ports:
       - "${PORT:-3001}:${PORT:-3001}"
