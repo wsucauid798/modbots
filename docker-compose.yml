@@ -128,19 +128,12 @@ services:
     container_name: modbots-ml
     restart: unless-stopped
     environment:
-      ML_MODEL_ID: ${ML_MODEL_ID:-Qwen/Qwen2.5-3B-Instruct}
-      HF_HOME: /data/hf
+      OLLAMA_HOST: ${OLLAMA_HOST:-https://ollama.com}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-gemma4:31b-cloud}
+      OLLAMA_API_KEY: ${OLLAMA_API_KEY:?OLLAMA_API_KEY is required}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-120}
     ports:
       - "8000:8000"
-    volumes:
-      - hf-cache:/data/hf
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
 
   postgres:
     image: postgres:17-alpine
@@ -199,7 +192,6 @@ services:
       - minio-data:/data
 
 volumes:
-  hf-cache:
   postgres-data:
   redis-data:
   nats-data:
