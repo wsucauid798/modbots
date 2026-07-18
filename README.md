@@ -14,25 +14,23 @@ Separately tracked application repositories:
 - [modbots-web](https://github.com/wsucauid798/modbots-web): web app track
 - [modbots-desktop](https://github.com/wsucauid798/modbots-desktop): desktop app track
 
-This root repository holds only the container: compose, environment
-examples, and project files.
+This root repository holds the project shell and links the separately tracked
+application repositories. Backend Docker Compose files live in
+`modbots-backend/`.
 
 ## Prerequisites
 
 - Git
-- Docker with Docker Compose support
-- Node.js 22 or newer and npm
-- Rust toolchain for desktop work
-- Python and uv for ML service work outside Docker
-- An NVIDIA GPU for the ML service. Without one, the service falls back to
-  CPU; remove the gpu reservation from the `ml` service in
-  `docker-compose.yml` first.
+- Docker with Docker Compose support for the backend stack
+- Node.js, npm, Rust, and Python tooling as required by the individual app
+  repositories
 
 ## Running
 
-Start the full stack from the repository root:
+Start the full backend stack from the backend repository:
 
 ```powershell
+Set-Location modbots-backend
 Copy-Item .env.example .env
 docker compose up --build
 ```
@@ -43,7 +41,7 @@ boot downloads the model), the chat bots, who join the room on their own,
 the account surface at `http://localhost:3003`, and UPPS at
 `http://localhost:3010`.
 
-For backend-only development, run `npm run dev:api` at the root. The local
+For backend-only development, run commands from `modbots-backend/`. The local
 defaults expect PostgreSQL on port 5432.
 
 To generate repeatable development room activity while the stack is running:
