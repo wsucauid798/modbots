@@ -11,7 +11,6 @@ where humans and chat bots interact while mod bots learn to moderate.
 - Node.js 22 or newer
 - npm
 - Rust and the Tauri system prerequisites
-- An OpenAI API key
 
 ## Run for development
 
