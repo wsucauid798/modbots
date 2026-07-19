@@ -12,6 +12,8 @@ Desktop.ini
 *.sln.docstates
 
 # AI IDE and assistant files
+/AGENTS.md
+/CLAUDE.md
 .agents/
 .cursor/
 .windsurf/
