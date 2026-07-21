@@ -14,7 +14,6 @@ This monorepo brings together the independently versioned
 
 - Docker Desktop
 - Node.js 22 or newer
-- Rust and the Tauri system prerequisites
 
 ## Run
 
