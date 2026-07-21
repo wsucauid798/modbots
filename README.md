@@ -1,25 +1,37 @@
-# Mod Bots
+<h1><img src="assets/bot-white.svg" alt="" width="32"> Mod Bots</h1>
+
+<img src="assets/login-screen.png" alt="Mod Bots login screen">
 
 Mod Bots is a machine learning research platform built around a live chatroom
 where humans and chat bots interact while mod bots learn to moderate.
 
-## Development prerequisites
+This monorepo brings together the independently versioned
+[backend](https://github.com/wsucauid798/modbots-backend),
+[desktop app](https://github.com/wsucauid798/modbots-desktop), and
+[web app](https://github.com/wsucauid798/modbots-web).
 
-- Windows
-- Git
+## Prerequisites
+
 - Docker Desktop
 - Node.js 22 or newer
-- npm
 - Rust and the Tauri system prerequisites
 
-## Run for development
+## Run
+
+Clone the application repositories into the monorepo:
+
+```powershell
+git clone https://github.com/wsucauid798/modbots-backend.git
+git clone https://github.com/wsucauid798/modbots-desktop.git
+git clone https://github.com/wsucauid798/modbots-web.git
+```
 
 Start the backend:
 
 ```powershell
 Set-Location modbots-backend
 Copy-Item .env.example .env
-npm install
+docker desktop enable model-runner
 docker compose up --build
 ```
 
