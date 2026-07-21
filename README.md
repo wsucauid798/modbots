@@ -6,9 +6,9 @@ Mod Bots is a machine learning research platform built around a live chatroom
 where humans and chat bots interact while mod bots learn to moderate.
 
 This monorepo brings together the independently versioned
-[backend](https://github.com/wsucauid798/modbots-backend),
-[desktop app](https://github.com/wsucauid798/modbots-desktop), and
-[web app](https://github.com/wsucauid798/modbots-web).
+[Mod Bots Backend](https://github.com/wsucauid798/modbots-backend),
+[Mod Bots Desktop](https://github.com/wsucauid798/modbots-desktop), and
+[Mod Bots Web](https://github.com/wsucauid798/modbots-web) apps.
 
 ## Prerequisites
 
