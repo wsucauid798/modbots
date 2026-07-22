@@ -6,6 +6,10 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Branch: release/v0.0.1-alpha](https://img.shields.io/badge/branch-release%2Fv0.0.1--alpha-64748b)
 ![Monorepo](https://img.shields.io/badge/workspace-monorepo-7c3aed)
+![Last commit](https://img.shields.io/github/last-commit/wsucauid798/modbots/release/v0.0.1-alpha)
+![Repo size](https://img.shields.io/github/repo-size/wsucauid798/modbots)
+![Commit activity](https://img.shields.io/github/commit-activity/m/wsucauid798/modbots)
+![Open issues](https://img.shields.io/github/issues/wsucauid798/modbots)
 
 Mod Bots is a machine learning research platform built around a live chatroom
 where humans and chat bots interact while mod bots learn to moderate.
