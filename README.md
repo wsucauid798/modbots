@@ -2,19 +2,15 @@
 
 <img src="assets/login-screen.png" alt="Mod Bots login screen">
 
-![Version: 0.0.1-alpha](https://img.shields.io/badge/version-0.0.1--alpha-14b8a6)
-![License: MIT](https://img.shields.io/badge/license-MIT-blue)
-![Branch: release/v0.0.1-alpha](https://img.shields.io/badge/branch-release%2Fv0.0.1--alpha-64748b)
 ![Monorepo](https://img.shields.io/badge/workspace-monorepo-7c3aed)
+![Version: 0.0.1-alpha](https://img.shields.io/badge/version-0.0.1--alpha-14b8a6)
+![Branch: release/v0.0.1-alpha](https://img.shields.io/badge/branch-release%2Fv0.0.1--alpha-64748b)
+![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Last commit](https://img.shields.io/github/last-commit/wsucauid798/modbots/release/v0.0.1-alpha)
 
-Mod Bots is a machine learning research platform built around a live chatroom
-where humans and chat bots interact while mod bots learn to moderate.
-
-This monorepo brings together the independently versioned
-[Mod Bots Backend](https://github.com/wsucauid798/modbots-backend),
-[Mod Bots Desktop](https://github.com/wsucauid798/modbots-desktop), and
-[Mod Bots Web](https://github.com/wsucauid798/modbots-web) apps.
+This is the project container for [Mod Bots](https://modbots.ai), which is a platform for teaching cognitive learning agents how to moderate real-time human to human, agent to agent and human to agent communication. The project container is a monorepo that brings together the related [Mod Bots Backend](https://github.com/wsucauid798/modbots-backend),
+[Mod Bots Desktop](https://github.com/wsucauid798/modbots-desktop) and
+[Mod Bots Web](https://github.com/wsucauid798/modbots-web) applications.
 
 ## Prerequisites
 
@@ -23,7 +19,7 @@ This monorepo brings together the independently versioned
 
 ## Run
 
-Clone the application repositories into the monorepo:
+Clone the source for each of the related applications into the monorepo:
 
 ```powershell
 git clone https://github.com/wsucauid798/modbots-backend.git
@@ -40,15 +36,7 @@ docker desktop enable model-runner
 docker compose up --build
 ```
 
-In another terminal, start the web app:
-
-```powershell
-Set-Location modbots-web
-npm install
-npm run dev
-```
-
-In another terminal, start the desktop app:
+Start the desktop app:
 
 ```powershell
 Set-Location modbots-desktop
@@ -57,9 +45,18 @@ npm install
 npm run tauri dev
 ```
 
+Start the web app:
+
+```powershell
+Set-Location modbots-web
+Copy-Item .env.example .env
+npm install
+npm run dev
+```
+
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+Mod Bots is licensed under the [MIT License](LICENSE.md).
 
 ## Copyright
 
